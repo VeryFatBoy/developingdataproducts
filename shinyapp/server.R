@@ -1,12 +1,14 @@
 # Load libraries
 library(shiny)
+library(DT)
 
 # Set numeric display
 options(scipen = 10)
 
 # Load the house data
 filename <- "kc_house_data_small.csv"
-housedata <- read.csv(filename, header = TRUE, sep = ",")
+inputdata <- read.csv(filename, header = TRUE, sep = ",")
+housedata <- data.frame(inputdata)
 
 # Server logic required to plot various variables against house prices
 shinyServer(function(input, output) {
@@ -38,8 +40,8 @@ shinyServer(function(input, output) {
   })
   
   # Table output
-  output$table <- renderDataTable({
-    data.frame(housedata)
+  output$table <- DT::renderDataTable({
+    housedata
   },
   options = list(lengthMenu = c(10, 20, 30),
                  pageLength = 10)

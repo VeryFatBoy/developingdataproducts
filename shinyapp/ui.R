@@ -1,5 +1,6 @@
 # Load libraries
 library(shiny)
+library(DT)
 
 # UI for house prices application
 shinyUI(pageWithSidebar(
