@@ -1,0 +1,83 @@
+Seattle House Prices
+========================================================
+author: VeryFatBoy
+date: 25 December 2015
+font-family: 'Helvetica'
+
+<style>
+/* Remove auto-hyphenation */
+.reveal h1, .reveal h2, .reveal h3 {
+  word-wrap: normal;
+  -moz-hyphens: none;
+}
+
+/* Slide titles */
+.reveal h3 {
+  font-size: 50px;
+  color: blue;
+}
+
+/* Heading for slides with two hashes ## */
+.reveal .slides section .slideContent h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: green;
+}
+
+/* Ordered and Unordered list styles */
+.reveal ul, .reveal ol {
+  font-size: 40px;
+  color: black;
+  list-style-type: round;
+}
+</style>
+
+Introduction
+========================================================
+
+![House Image](old-english-house.jpg)
+
+The application provides some exploratory data analysis of a subset of Seattle house prices data.
+
+The application would be useful for individuals, estate agents or data scientists wanting to quickly explore house prices data.
+
+With small code modifications, the application could also be used with house prices data from other cities.
+
+Features
+========================================================
+
+The application supports:
+
+- Summary of data.
+- Tabular data representation with search capability.
+- Plots of data for *Number of Bedrooms*, *Number of Bathrooms*, *Square Feet*, *Condition*, *Year Built* and *Zipcode*.
+- Inclusion/exclusion of outlier data.
+- Simple linear regression plots, useful for data scientists.
+
+Plot examples (using R expressions)
+========================================================
+
+![plot of chunk boxplot](Shiny-figure/boxplot-1.png) 
+
+Figure 1. Boxplot
+
+***
+
+![plot of chunk plot](Shiny-figure/plot-1.png) 
+
+Figure 2. Linear Regression
+
+Summary
+========================================================
+
+Shiny application:
+
+- Live at [shinyapps](https://veryfatboy.shinyapps.io/shinyapp)
+- Source code on [github](https://github.com/VeryFatBoy/developingdataproducts)
+
+Slide presentation:
+
+- Live at [rpubs](http://rpubs.com/VeryFatBoy/shinypres)
+- Source code on [github](https://github.com/VeryFatBoy/developingdataproducts)
+
+Try it!
