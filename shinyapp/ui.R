@@ -50,7 +50,7 @@ shinyUI(pageWithSidebar(
                  tags$li(strong("Simple Linear Regression"),
                          p("This perfoms a simple linear regression comparing house prices against the selected option on the left-hand side.")),
                  tags$li(strong("About"),
-                         p("This contains a link to the github repo for the shiny application source code."))
+                         p("The developer of this application."))
                  )
                ),
       tabPanel("Summary", verbatimTextOutput("summary")),
@@ -59,7 +59,7 @@ shinyUI(pageWithSidebar(
       tabPanel("Simple Linear Regression", plotOutput("regression")),
       tabPanel("About",
                br(),
-               p("This application was developed by ", strong("VeryFatBoy"))
+               p("This application was developed by", strong("VeryFatBoy"))
                )
       )
     )

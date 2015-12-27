@@ -15,19 +15,6 @@ shinyServer(function(input, output) {
   formulaText <- reactive({
     paste("housedata$price ~ housedata$", input$compare)
     })
-  
-  # Summary output
-  output$summary <- renderPrint({
-    summary(housedata)
-    })
-
-  # Table output
-  output$table <- renderDataTable({
-    data.frame(housedata)
-    },
-    options = list(lengthMenu = c(10, 20, 30),
-                   pageLength = 10)
-    )
 
   # Boxplot output
   output$plot <- renderPlot({
@@ -44,4 +31,17 @@ shinyServer(function(input, output) {
     par(mfrow = c(2, 2))
     plot(lm(as.formula(formulaText())))
     })
+
+  # Summary output
+  output$summary <- renderPrint({
+    summary(housedata)
+  })
+  
+  # Table output
+  output$table <- renderDataTable({
+    data.frame(housedata)
+  },
+  options = list(lengthMenu = c(10, 20, 30),
+                 pageLength = 10)
+  )
   })
